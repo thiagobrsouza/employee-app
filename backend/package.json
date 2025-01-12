@@ -1,0 +1,37 @@
+{
+  "name": "employee-app-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagobrsouza/employee-app.git"
+  },
+  "author": "Thiago Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagobrsouza/employee-app/issues"
+  },
+  "homepage": "https://github.com/thiagobrsouza/employee-app#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "prisma": "^6.2.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
+    "morgan": "^1.10.0",
+    "ts-node-dev": "^2.0.0"
+  }
+}
