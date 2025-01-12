@@ -12,3 +12,40 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Department {
+  id    String  @id @default(uuid())
+  name  String  @unique
+  notes String? @db.Text
+  roles Role[]
+
+  @@map("departments")
+}
+
+model Role {
+  id           String     @id @default(uuid())
+  name         String     @unique
+  notes        String?    @db.Text
+  department   Department @relation(fields: [departmentId], references: [id])
+  departmentId String
+  employees     Employee[]
+
+  @@map("roles")
+}
+
+model Employee {
+  id            String  @id @default(uuid())
+  firstName     String
+  lastName      String
+  gender        String
+  rg            String  @unique
+  cpf           String  @unique
+  birthDate     String
+  admissionDate String
+  dismissalDate String?
+  salary        String
+  role          Role    @relation(fields: [roleId], references: [id])
+  roleId        String
+
+  @@map("employees")
+}
