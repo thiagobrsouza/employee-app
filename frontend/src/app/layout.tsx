@@ -1,14 +1,16 @@
+import { Card } from "@/components/card";
+import { Navbar } from "@/components/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body>
-        <h1>Root</h1>
+        <Navbar />
         {children}
       </body>
     </html>
