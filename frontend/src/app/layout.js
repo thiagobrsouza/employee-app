@@ -3,6 +3,7 @@ import BootstrapClient from '@/components/BootstrapClient';
 import { Navbar } from '@/components/Navbar';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '@/app/globals.css';
 
 export const metadata = {
   title: "Create Next App",
